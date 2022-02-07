@@ -3,15 +3,13 @@ const router = express.Router()
 
 const db = require('../db/db')
 
+// GET /api/v1/transactions/
 router.get('/', (req, res) => {
-  db.getWidgets()
-    .then(widgets => {
-      res.json(widgets)
-      return null
-    })
-    .catch(err => {
-      res.status(500).send(err.message)
-    })
+  try {
+    res.json({ statement: 'Expense Tracker!' })
+  } catch (err) {
+    res.status(500).send(err.message)
+  }
 })
 
 module.exports = router
