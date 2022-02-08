@@ -3,9 +3,15 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getTransactions
+  getTransactions,
+  addTransaction
 }
 
 function getTransactions (db = connection) {
   return db('transactions').select()
+}
+
+function addTransaction (transaction, db = connection) {
+  return db('transactions')
+    .insert({ expense: transaction.expense, amount: transaction.amount })
 }
