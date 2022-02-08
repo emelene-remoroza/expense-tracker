@@ -1,10 +1,16 @@
 import React from 'react'
 
+import {budget} from './Budget'
+import {totalExpenses} from './TotalExpenses'
+
 function Balance () {
+
+  const  balance  = budget - totalExpenses
+
   return (
     <>
-    <div>
-      <span>Balance: $400.00</span>B
+    <div className="sidebox">
+      <span>Balance: ${balance}</span>
     </div>
     </>
   )
