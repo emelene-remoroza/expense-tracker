@@ -42,5 +42,20 @@ router.delete('/', (req, res) => {
     })
 })
 
+// PATCH /api/v1/transactions/
+router.patch('/', (req, res) => {
+  db.updateTransaction(req.body)
+    .then(() => {
+      return db.getTransactions()
+    })
+    .then((transaction) => {
+      res.json(transaction)
+      return null
+    })
+    .catch(err => {
+      res.status(500).send(err.message)
+    })
+})
+
 
 module.exports = router

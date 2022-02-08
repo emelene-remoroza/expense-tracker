@@ -22,3 +22,9 @@ export function deleteTransaction (id) {
     .then(response => response.body)
 }
 
+// export function updateTransaction (transaction) {
+//   return request
+//     .patch(serverUrl)
+//     .send(transaction)
+//     .then(response => response.body)
+// }
