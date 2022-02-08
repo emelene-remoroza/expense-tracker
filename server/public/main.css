@@ -1,8 +1,71 @@
-.widget-details .visible {
-  display: block;
+body{
+  padding: 20px;
+  border: 1px solid gray;
+}
+  
+.container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-family: 'Trebuchet MS';
+}
+     
+.header {
+  flex: 0 0 100%;
+  text-align: center;
+  background-color: #006666;
+  color: white;
+}
+     
+.div1,.div2{
+
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid #004c4c;
+  text-align: justify;
+}
+     
+.div1 {
+  flex: 0 0 25%;
+  margin-left: 0;
+}
+     
+.div2 {
+  flex: 1 0 30%;
 }
 
-.widget-details .hidden {
-  display: none;
+.sidebox{
+  border: 1px #004c4c solid;
+  font-family: 'Trebuchet MS';
+  background-color: #b2d8d8;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 12px;
+  border-radius: 12px;
+  padding: 20px;
 }
 
+.table {
+  width: 80%;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+  font-family: 'Trebuchet MS';
+  font-size: small;
+  border:1px #004c4c solid;
+  background-color:white;
+  padding: 5px
+}
+
+.form {
+  width: 80%;
+  padding: 10px 20px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #004c4c;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
