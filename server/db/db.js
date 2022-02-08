@@ -4,7 +4,8 @@ const connection = require('knex')(config)
 
 module.exports = {
   getTransactions,
-  addTransaction
+  addTransaction,
+  deleteTransaction
 }
 
 function getTransactions (db = connection) {
@@ -15,3 +16,10 @@ function addTransaction (transaction, db = connection) {
   return db('transactions')
     .insert({ expense: transaction.expense, amount: transaction.amount })
 }
+
+function deleteTransaction (id, db = connection) {
+  return db('transactions')
+    .delete()
+    .where('id', id)
+}
+

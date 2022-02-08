@@ -30,4 +30,17 @@ router.post('/', (req, res) => {
     })
 })
 
+// DELETE /api/v1/transactions/
+router.delete('/', (req, res) => {
+  db.deleteTransaction(req.body.id)
+    .then(() => {
+      res.sendStatus(200)
+      return null
+    })
+    .catch(err => {
+      res.status(500).send(err.message)
+    })
+})
+
+
 module.exports = router

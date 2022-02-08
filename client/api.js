@@ -15,3 +15,10 @@ export function addTransaction (transaction) {
     .then(response => response.body)
 }
 
+export function deleteTransaction (id) {
+  return request
+    .delete(serverUrl)
+    .send({ id: id })
+    .then(response => response.body)
+}
+
