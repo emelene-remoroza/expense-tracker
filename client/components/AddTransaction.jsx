@@ -6,6 +6,7 @@ export default function AddTransaction (props) {
   const cb = props.cb
   const [transact, setTransact] = useState({
     expense: '',
+    date: Date,
     amount: 0.00,
   })
 
@@ -32,21 +33,26 @@ export default function AddTransaction (props) {
 
   return (
     <div>
-      <h3>Add New Transaction</h3>
+      {/* <h3>Add New Transaction</h3> */}
       <form onSubmit={handleSubmit}>
         <div>
-        <label htmlFor='expense'>Transaction Name:</label>
-          <input
+          <input className='form'
             onChange={handleChange}
             value={transact.expense}
             name="expense"
             placeholder='Enter Transaction'
-            className='form-control'
           ></input>
-        </div>
-        <div>
-        <label htmlFor="amount">Price:</label>
-          <input
+        {/* </div>
+        <div> */}
+          <input className='form'
+            onChange={handleChange}
+            value={transact.date}
+            name="date"
+            placeholder="Enter Date"
+          ></input>
+        {/* </div>
+        <div> */}
+          <input className='form'
             onChange={handleChange}
             value={transact.amount}
             name="amount"
@@ -55,6 +61,7 @@ export default function AddTransaction (props) {
         </div>
         <div>
             <button>Submit</button>
+
         </div>
       </form>
     </div>
