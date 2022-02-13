@@ -7,7 +7,7 @@ export default function AddTransaction (props) {
   const [transact, setTransact] = useState({
     expense: '',
     date: Date,
-    amount: 0.00,
+    amount: Number,
   })
 
   function handleChange (event) {

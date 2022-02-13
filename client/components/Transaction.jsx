@@ -25,7 +25,7 @@ export default function Transaction (props) {
 
 
   return (
-    <table class='table'>
+    <table className='table'>
     <thead>
       <tr>
         <th>ID</th>
