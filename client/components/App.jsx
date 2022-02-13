@@ -6,6 +6,7 @@ import Transaction from './Transaction'
 import Budget from './Budget'
 import TotalExpenses from './TotalExpenses'
 import Balance from './Balance'
+import History from './History'
 
 import { getTransactions } from '../api'
 
@@ -64,6 +65,7 @@ function App () {
         <Budget />
         <TotalExpenses />
         <Balance />
+        <History />
       </div>
       <div className='div2'>
         <h3><button onClick={clickHandler}>Add Transaction</button></h3>
