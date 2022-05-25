@@ -30,6 +30,5 @@ npm run dev
 
 ### Design/Layout
 
-![image](https://user-images.githubusercontent.com/89516103/170225571-5103a53d-7e28-490f-bd75-d8d217cca752.png)
-
+![image](https://user-images.githubusercontent.com/89516103/170228307-61e312be-a74b-4f58-be2f-9d85c0f30723.png)
 
